@@ -43,7 +43,7 @@ def toggle_autoplay():
 # --- 側邊欄：初始設定 ---
 if not state.initialized:
     with st.sidebar:
-        st.header("Ksim V3 (Dev)")
+        st.header("Ksim V3")
         
         selected_asset_type = st.radio(
             "選擇回測資產類型 (定義交易規則)",
@@ -526,4 +526,5 @@ if state.auto_play and state.sim_active:
         st.toast("⚠️ 交易觸發，自動暫停播放", icon="⏸️")
         st.rerun()
     else:
+
         st.rerun()
