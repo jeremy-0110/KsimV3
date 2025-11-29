@@ -213,7 +213,7 @@ def render_main_chart(ticker, core_data, current_idx, positions, end_sim_index_o
     
     # 6. RSI
     if rsi_row > 0 and 'RSI' in data_to_display.columns:
-        fig.add_trace(go.Scatter(x=x_axis_data, y=data_to_display['RSI'], line=dict(color='purple'), name='RSI'), row=rsi_row, col=1)
+        fig.add_trace(go.Scatter(x=x_axis_data, y=data_to_display['RSI'], line=dict(color='white'), name='RSI'), row=rsi_row, col=1)
         fig.add_hline(y=70, line_dash="dash", line_color="red", row=rsi_row, col=1)
         fig.add_hline(y=30, line_dash="dash", line_color="green", row=rsi_row, col=1)
         fig.add_hline(y=50, line_dash="dot", line_color="gray", row=rsi_row, col=1)
@@ -319,4 +319,5 @@ def render_equity_curve(equity_history):
         hovermode="x unified",
         xaxis=dict(showticklabels=False)
     )
+
     return fig
