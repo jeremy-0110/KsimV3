@@ -48,7 +48,7 @@ if not state.initialized:
         selected_asset_type = st.radio(
             "選擇回測資產類型 (定義交易規則)",
             ('Stock', 'Forex', 'Crypto'),
-            format_func=lambda x: {'Stock': '📈 股票', 'Forex': '💱 匯率', 'Crypto': '\t₿ 加密貨幣'}[x]
+            format_func=lambda x: {'Stock': '📈 股票', 'Forex': '💱 匯率', 'Crypto': '₿ 加密貨幣'}[x]
         )
         
         state.ticker = st.text_input(
@@ -528,5 +528,6 @@ if state.auto_play and state.sim_active:
     else:
 
         st.rerun()
+
 
 
